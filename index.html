@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Desafio condiciones</title>
+</head>
+<body>
+    <section class="image1">
+        <style>
+            .borde {
+                border: 2px solid red;
+            }
+        </style>
+    
+        <img src="assets/img/DSC00412.jpg" alt="letras" onclick="this.classList.toggle('borde')">
+    
+    </section>
+
+
+            
+        
+        <section class="desafio2">
+
+            <p>Sólo puedes llevar 10 stickers en total</p>
+            <div class="stickers">
+
+                
+    
+                <div class="sticker1">
+                    <img src="assets/img/sticker1.jpg" alt="sticker1">
+                    <input class="input1" type="text">
+                </div>
+                <div class="sticker1">
+                    <img src="assets/img/sticker2.jpg" alt="sticker1">
+                    <input class="input2" type="text">
+                </div>
+                <div class="sticker1">
+                    <img src="assets/img/sticker3.jpg" alt="sticker1">
+                    <input class="input3" type="text">
+                </div>
+            </div>
+            <p id="alerta"></p>
+            <button class="verificar" onclick="{
+                let inputs = document.querySelectorAll('.sticker1 input');
+                let alerta = document.getElementById('alerta');
+                let total = 0;
+    
+                for (let i = 0; i < inputs.length; i++) {
+                    total += Number(inputs[i].value);
+                }
+    
+                if (total <= 10) {
+                    alerta.innerHTML = 'Llevas ' + total + ' stickers';
+                } else {
+                    alerta.innerHTML = 'Llevas demasiados';
+                }
+            }">Verificar</button>
+        </section>
+
+    <section class="desafio3">
+
+        <div class="titulo">
+            <h2><strong>Ingresa el password</strong></h2>
+        </div>
+        <div class="select">
+            <select id="miSelect1" onchange="
+                let valor1 = this.value
+                ">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select id="miSelect2" onchange="
+            let valor2 = this.value
+            ">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select id="miSelect3" onchange="
+            let valor3 = this.value
+            ">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+        <div>
+            <p id="mensaje"></p>
+            <button id="button" onclick="{
+                let valor1 = document.getElementById('miSelect1').value;
+                let valor2 = document.getElementById('miSelect2').value;
+                let valor3 = document.getElementById('miSelect3').value;
+                let mensaje = document.getElementById('mensaje');
+                if (valor1 === '9' && valor2 === '1' && valor3 === '1') {
+                    mensaje.innerHTML = 'Password 1 correcto';
+                } else if (valor1 === '7' && valor2 === '1' && valor3 === '4') {
+                    mensaje.innerHTML = 'Password 2 es correcto';
+                } else {
+                    mensaje.innerHTML = 'Password incorrecto';
+                }
+            }">Ingresar</button>
+            
+        </div>
+
+    </section>
+    
+</body>
+</html>

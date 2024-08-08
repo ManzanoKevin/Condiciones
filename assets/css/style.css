@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.image1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 750px;
+}
+
+.image1 img {
+    height: 500px;
+}
+
+.desafio2 {
+    height: 750px;
+    display: flex;
+    flex-direction: column !important; 
+    justify-content: center;
+    align-items: center;
+}
+
+.texto {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.stickers {
+    display: flex;
+    flex-direction: row; 
+}
+
+.sticker1 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 10px;
+}
+
+.sticker1 img {
+    height: 350px;
+    margin-bottom: 10px; 
+    
+}
+
+.sticker1 input {
+    width: 100px; 
+}
+
+.desafio3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 200px;
+    border: black solid;
+    height: 500px;
+}
+
+.select {
+    display: flex;
+    flex-direction: row;
+}
+
+#miSelect1 , #miSelect2 , #miSelect3 , #button {
+    border-radius: 15%;
+    padding: 5px;
+}
+
+#button {
+    margin: 10px;
+}
+
